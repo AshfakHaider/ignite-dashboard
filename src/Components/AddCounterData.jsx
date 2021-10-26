@@ -5,7 +5,7 @@ const AddCounterData = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
     return (
-        <div className='mt-5'>
+        <div className='mt-5 p-3'>
             <h5 className="headingEdit mb-2">Add Counter Section Data</h5>
             <hr className='dividerEdit' />
             <div className="col-md-10">
@@ -15,9 +15,11 @@ const AddCounterData = () => {
                     <input name='title' id='title' required placeholder='Enter Title of Counter' className='form-control mb-2' {...register("title")} />
                     <label htmlFor="suffix" className='mb-0'>Enter Suffix If Any</label>
                     <input type="text" id='suffix' name='suffix' placeholder='Enter Suffix Of If Any' {...register('suffix')} className='form-control mb-2' />
-
-                    <label htmlFor="countNumber">Enter Counter Number</label>
+                    <label htmlFor="countNumber" className='mb-0'>Enter Counter Number</label>
                     <input type="number" id='countNumber' name='countNumber' required className='mb-2 form-control' placeholder='Please Enter the count number' {...register('countNumber')} />
+
+                    <label htmlFor="category" className='mb-0'>Please Enter Category</label>
+                    <input type="text" name='category' id='category' className='form-control mb-2'  defaultValue='counter' {...register('category')} />
                     {/* include validation with required or other standard HTML validation rules */}
                     {/* errors will return when field validation fails  */}
                     {errors.exampleRequired && <span>This field is required</span>}

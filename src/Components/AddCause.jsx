@@ -27,6 +27,9 @@ const AddCause = () => {
                     <label htmlFor="raised"  className='mb-0'>Enter Raised Money Of The Cause</label>
                     <input type='number' id='raised' className='form-control mb-2' name='raised' placeholder='Please Enter Raised Money Of The Cause' required {...register("raised")} />
 
+                    <label htmlFor="category" className='mb-0'>Please Enter Category</label>
+                    <input type="text" name='category' id='category' defaultValue='cause' className='form-control mb-2' {...register('category')} />
+
                     <label htmlFor="description"  className='mb-0'>Enter Description Of The Cause</label>
                     <textarea type='text' id='description' name='description' className='form-control mb-2' placeholder='Please Enter Description Of The Cause' required {...register("description")} rows='4' />
                     {/* include validation with required or other standard HTML validation rules */}

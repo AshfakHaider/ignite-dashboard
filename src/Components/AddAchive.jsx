@@ -13,6 +13,9 @@ const AddAchive = () => {
                     {/* register your input into the hook by invoking the "register" function */}
                     <label htmlFor="image" className='mb-0'>Please Enter Achieve Section Image</label>
                     <input required name='image' id='image' className='form-control mb-2' type='file' placeholder="Please Enter Acvhivement Image " {...register("image")} />
+                    <label htmlFor="category" className='mb-0'>Please Enter Category</label>
+                    <input type="text" name='category' id='category' className='form-control mb-2'  defaultValue='achivement' {...register('category')} />
+
                     {errors.exampleRequired && <span>This field is required</span>}
                     <br />
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import AddAchive from '../Components/AddAchive';
 import AddCause from '../Components/AddCause';
+import AddCounterData from '../Components/AddCounterData';
 import AddEvents from '../Components/AddEvents';
 import AddFeatured from '../Components/AddFeatured';
 
@@ -12,6 +13,7 @@ const HomeEdit = () => {
             <AddEvents/>
             <AddFeatured/>
             <AddAchive/>
+            <AddCounterData/>
         </div>
     );
 };

@@ -12,10 +12,10 @@ const AddAchive = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {/* register your input into the hook by invoking the "register" function */}
                     <label htmlFor="image" className='mb-0'>Please Enter Achieve Section Image</label>
-                    <input name='image' id='image' className='form-control mb-2' type='file' placeholder="Please Enter Acvhivement Image " {...register("image")} />
+                    <input required name='image' id='image' className='form-control mb-2' type='file' placeholder="Please Enter Acvhivement Image " {...register("image")} />
                     {errors.exampleRequired && <span>This field is required</span>}
                     <br />
-                    
+
                     <button className='submitButton'>Submit</button>
                 </form>
 

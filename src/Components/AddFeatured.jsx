@@ -14,12 +14,11 @@ const AddFeatured = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {/* register your input into the hook by invoking the "register" function */}
                     <label htmlFor="image" className='mb-0'>Please Enter Featured Section Image</label>
-                    <input name='image' id='image' className='form-control mb-2' type='file' placeholder="Please Enter Featured Image " {...register("image")} />
+                    <input required name='image' id='image' className='form-control mb-2' type='file' placeholder="Please Enter Featured Image " {...register("image")} />
                     {errors.exampleRequired && <span>This field is required</span>}
                     <br />
                     <button className='submitButton'>Submit</button>
                 </form>
-
             </div>
         </div>
     );

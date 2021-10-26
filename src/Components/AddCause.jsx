@@ -19,7 +19,7 @@ const AddCause = () => {
                     <input  name='title' id='title' type='text' className='form-control mb-2' placeholder='Please Enter Title Of The Cause' required {...register("title")} />
 
                     <label htmlFor="image"  className='mb-0'>Enter Image Of The Cause</label>
-                    <input type='file' className='form-control-file mb-2' name='image' id='image' placeholder='Please Enter Image Of The Cause' required {...register("image")} />
+                    <input type='file' className='form-control mb-2' name='image' id='image' placeholder='Please Enter Image Of The Cause' required {...register("image")} />
 
                     <label htmlFor="goal"  className='mb-0'>Enter Goal Money Of The Cause</label>
                     <input type='number' id='goal' className='form-control mb-2' name='goal' placeholder='Please Enter Goal Money The Cause' required {...register("goal")} />

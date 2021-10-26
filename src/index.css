@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Zen Antique Soft', serif;  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,57 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.drawer-main{
+  background-image: url('../src/assets/images/minimal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+.dashboard-container{
+  background-image: url('../src/assets/images/minimal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.active{
+  background-color: black;
+}
+
+.headingDashboard{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 48px;
+  font-family: 'Zen Antique Soft';
+}
+.submitButton{
+  padding: 8px 25px;
+  background-color: #000;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+}
+.submitButton:hover{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.headingEdit{
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+  line-height: 30px;
+}
+.dividerEdit{
+  width: 450px;
+  border-top: 2px solid #FAB609;
+  margin: 15px 0 ;
 }

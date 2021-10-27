@@ -12,11 +12,15 @@ import Welcome from './Pages/Welcome';
 import DashboardHome from './Pages/DashboardHome';
 import HomeContents from './Pages/HomeContents';
 import HomeEdit from './Pages/HomeEdit';
+import Login from './Components/Login/Login';
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/login">
+          <Login/>
+        </Route>
         <Route path='/dashboard/homeEdit'>
           <Layout>
             <HomeEdit />

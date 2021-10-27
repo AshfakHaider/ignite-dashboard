@@ -63,3 +63,13 @@ code {
   border-top: 2px solid #FAB609;
   margin: 15px 0 ;
 }
+.signup-btn{
+  background-image: linear-gradient(to right, #FAB609, #FAB609);
+  border: none;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}

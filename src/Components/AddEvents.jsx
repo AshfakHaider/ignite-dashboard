@@ -3,15 +3,30 @@ import { useForm } from "react-hook-form";
 import axios from 'axios';
 
 const AddEvents = () => {
-    const [doubleClick, setDoubleClick] = useState(false);
+    // const [doubleClick, setDoubleClick] = useState(false);
     const [imgUrl, setImgUrl] = useState(null);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        const eventData = {
+            title : data.title,
+            image: imgUrl,
+            description: data.description,
+            time: data.time,
+            category: data.category,
+            location: data.location,
+        }
+        axios.post('http://localhost:5000/api/addEvents',eventData)
+        .then(res=>{
+            console.log(res.data);
+            window.location.reload();
+        })
+        .catch(err => console.log(err));
     };
+
+    
     const handleImgUpload = event => {
-        console.log(event.target.files[0])
+        // console.log(event.target.files[0])
         const imageData = new FormData();
         imageData.set('key', '0ad6173cd5aeb795e482f44abb146bbe')
         imageData.append('image', event.target.files[0]);
@@ -49,7 +64,9 @@ const AddEvents = () => {
                     {/* errors will return when field validation fails  */}
                     {errors.exampleRequired && <span>This field is required</span>}
                     <br />
-                    <button type='submit' onClick={handleSubmit(onSubmit)} className='submitButton'>Submit</button>
+                    <button type='submit'  onClick={handleSubmit(onSubmit)} className='submitButton'>
+                            Submit
+                    </button>
                 </form>
             </div>
 

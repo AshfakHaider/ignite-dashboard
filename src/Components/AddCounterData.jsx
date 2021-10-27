@@ -1,9 +1,23 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import axios from 'axios';
 
 const AddCounterData = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        const eventData = {
+            title: data.title,
+            suffix: data.suffix,
+            count: data.countNumber,
+            category : data.category
+        }
+        axios.post('http://localhost:5000/api/addCounter', eventData)
+            .then(res =>{
+                console.log(res.status);
+                window.location.reload();
+            })
+            .catch(err => console.log(err));
+    };
     return (
         <div className='mt-5 p-3'>
             <h5 className="headingEdit mb-2">Add Counter Section Data</h5>
